@@ -1,0 +1,378 @@
+/* General styling for the library section */
+.library-container {
+    padding: 60px 60px;
+    background-image: url(../assets/Anout.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+    position: relative;  
+    background-color: #141212;
+    color: #fff;  
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;   
+    overflow: hidden;
+}
+
+.library-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);   
+    z-index: -1;  
+    transition: background 0.3s ease;   
+}
+
+.library-container h1, .library-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.library-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;  
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
+}
+
+.library-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.library-container:hover::before {
+    background: rgba(0, 0, 0, 0.6);  
+}
+
+
+.library-container .cta-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.library-container .cta-btn:hover {
+    background-color: #e6891e;
+    transform: translateY(-5px);  
+}
+/* Keyframes for Background Slider */
+@keyframes bgSlider {
+    0% { background-image: url('../assets/image1.jpg'); }
+    20% { background-image: url('../assets/image2.jpg'); }
+    40% { background-image: url('../assets/image3.jpg'); }
+    60% { background-image: url('../assets/image4.jpg'); }
+    80% { background-image: url('../assets/image5.jpg'); }
+    100% { background-image: url('../assets/image1.jpg'); } 
+}
+
+/* My Library Section */
+.my-library {
+    margin: 50px auto;
+    padding: 60px;
+    width: 100%;
+   
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out, bgSlider 9s infinite ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Adding a Dark Overlay for Readability */
+.my-library::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* Title Styling */
+.my-library-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+    position: relative;
+    z-index: 2;
+}
+
+#songOptions{
+    margin: 5px;
+}
+
+.songOpt{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: #e6d9d9;
+}
+
+.songOpt p, .songOpt button{
+    font-size: small;
+}
+
+.songOpt img{
+    width: 50px;
+}
+
+.library-names{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+}
+
+.library-names a, .library-names button{
+    margin: 0;
+    padding: 5px 10px;
+    width: auto;
+    height: 30px;
+    background-color:darkorchid;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.add-library label{
+    color: white;
+}
+.library-description {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-top: 8px;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.search-container23 {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    border-radius: 5%;
+    border: 0px solid #110f0f;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: 2px solid #131212;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #8d5c0d;
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.6);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0f0f0f ;
+    cursor: pointer;
+    
+}
+
+.saved-playlists {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #e6d9d9;
+    margin-bottom: 15px;
+}
+
+.playlists-albums {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.playlist-album-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #555;
+    background-color: transparent;
+    border: 2px solid #bbb;
+    transition: all 0.3s ease;
+}
+
+.playlist-album-button:hover {
+    color: white;
+    background-color: #333;
+    border-color: #333;
+}
+
+
+.saved-songs {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+}
+
+.song-list p{
+    color: rgb(17, 17, 17);
+    font-size: 22px;
+    font-weight:bolder;
+}
+
+/* Controls Section */
+.library-subtitle {
+    font-size: 1.1rem;
+    color: #e9dada;
+    margin-bottom: 20px;
+    font-weight: 15px bolder;
+    
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.controls .MuiButton-contained {
+    font-weight: 500;
+}
+
+.controls .MuiButton-contained:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.controls .MuiButton-contained:active {
+    transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .song-list {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .playlists-albums {
+        justify-content: space-around;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .library-container {
+        background-size:cover; 
+    }
+    .search-container {
+        max-width: 90%;
+    }
+
+    .search-input {
+        font-size: 0.9rem;
+        padding: 10px 40px 10px 12px;
+    }
+}
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px){
+    .search-container {
+        max-width: 80%;
+      
+    }
+
+    .song-list {
+        grid-template-columns: repeat(2, 1fr);
+    }    
+
+    .library-container {
+        padding: 40px 20px;
+    }
+
+    .my-library {
+        
+        padding: 30px;
+        width: 100%;
+    }
+    
+    .saved-playlists, .saved-songs {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .controls {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+}

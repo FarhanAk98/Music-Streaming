@@ -1,0 +1,129 @@
+/* Container */
+.feedback-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 30px 20px;
+    color: #333;
+    background-image: url(../assets/feedback.jpg);
+  }
+  
+  /* Search Bar */
+  .search-bar02 {
+    text-align: center;
+    margin-bottom: 30px;
+   
+  }
+  
+  .search-bar02 input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 50%;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar02 input:focus {
+    border-color: #3f51b5;
+    outline: none;
+  }
+  
+  .search-bar02 button {
+    padding: 10px 15px;
+    margin-left: 8px;
+    border: none;
+    background-color: #0cad27;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar02 button:hover {
+    background-color: #0b9b2a;
+  }
+  
+  /* Title */
+  .page-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #e7e4ec;
+  }
+  
+  /* Form */
+  .feedback-form {
+    background-color: transparent;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    
+  }
+  
+  .feedback-form h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #dcdde6;
+    font-weight: bolder;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #040b44;
+    font-weight: bolder;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d8d2d2;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    
+    
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #3f51b5;
+    outline: none;
+  }
+  
+  .radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+  }
+  .comm{
+    font-size: 1em;
+    color: #bb1818;
+  }
+  /* Submit Button */
+  .submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #388e3c;
+  }
+  

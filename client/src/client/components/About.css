@@ -1,0 +1,116 @@
+/* About.css */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    padding: 30px;
+  }
+ 
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    z-index: 10; /* Ensures the logo is above other content */
+  }
+  
+  .logo {
+    width: 60px; /* Adjust the width for the logo */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for the logo */
+    margin-right: 20px; /* Adds space between the logo and nav links */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
+  }
+  
+  .about-text {
+    flex: 1;
+    padding-left: 40px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+  
+  .about-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .about-text .highlight {
+    color: #FF6347; /* Beautiful highlight color */
+    text-transform: uppercase;
+  }
+  
+  .about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .about-text p strong {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-text {
+      padding-left: 0;
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .about-image img {
+      max-width: 90%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .logo-container {
+      margin-bottom: 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+    }
+  
+    .nav-links a {
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+input user {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input userInput {
+    email: String!
+    password: String!
+}
+
+input trackInput {
+    name: String
+    artist: String
+    album: String
+    genre: String
+}
+
+input libraryInput {
+    username: String!
+    name: String!
+    artist_name: String!
+    album_name: String!
+    album_image: String!
+    audio: String!
+}
+
+type Track {
+    name: String!
+    artist_name: String!
+    album_name: String!
+    album_image: String!
+    audio: String!
+}
+
+type Query {
+    userAuthentication(input: userInput): String
+    searchTracks(input: trackInput): [Track!]!
+    getLibrary(input: String!): [Track!]!
+    getAllLibraries(input: String!): [String!]!
+}
+
+type Mutation {
+    createUser(input: user): Boolean
+    addLibrary(input: String!): Boolean
+    addToLibrary(input: libraryInput): Boolean
+    removeFromLibrary(input: libraryInput): Boolean
+}

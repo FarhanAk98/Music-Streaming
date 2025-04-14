@@ -1,0 +1,102 @@
+/* Background Styling */
+.music-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(359deg);
+    }
+}
+
+/* Album Art */
+.music-container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    object-fit: cover;
+    animation: 6s infinite rotate linear;
+    animation-play-state: running;
+
+}
+
+.nospin{
+    animation-play-state: paused !important;
+}
+
+/* Song Title */
+.music-container h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* Audio Player */
+.react-audio-player {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Full-Screen Button Styling */
+.fullscreen-btn {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(255, 75, 50, 0.3);
+}
+
+.fullscreen-btn:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .music-container {
+        width: 95%;
+    }
+
+    .music-container img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .music-container h4 {
+        font-size: 18px;
+    }
+
+    .react-audio-player {
+        width: 90%;
+    }
+
+    .fullscreen-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

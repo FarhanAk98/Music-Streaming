@@ -1,0 +1,121 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.privacy-us-page {
+  font-family: 'Arial', sans-serif;
+
+  background: url('../assets/Privacypolic.jpg') no-repeat center center fixed;
+  background-color: rgb(128, 175, 175);
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* Privacy Policy Container */
+.privacy-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: rgba(238, 229, 229, 0.7); /* 70% opacity */
+ 
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.privacy-container p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+strong {
+  color: #007bff;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  color: #333;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 15px 0;
+  color: #444;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Like Button */
+.like-button {
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 30px;
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.like-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .nav-logo {
+    margin-bottom: 15px;
+  }
+
+  .nav-title {
+    font-size: 22px;
+  }
+
+  .privacy-container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .like-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 35px;
+  }
+}
