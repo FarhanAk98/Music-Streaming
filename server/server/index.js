@@ -22,7 +22,7 @@ const resolvers = {
 const {ApolloServer} = require('apollo-server-express');
 const { get } = require('https');
 
-const server = new ApolloServer({typeDefs: fs.readFileSync('./qlschema.graphql', 'utf-8'), resolvers: resolvers})
+const server = new ApolloServer({typeDefs: fs.readFileSync('../../server/qlschema.graphql', 'utf-8'), resolvers: resolvers})
 
 server.start().then(
     (res)=>{
