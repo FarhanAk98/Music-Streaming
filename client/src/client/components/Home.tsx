@@ -57,7 +57,7 @@ function Home() {
     }
     `;
 
-    const response = await fetch(database, {
+    const response = await fetch('/graphql', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({query, variables:{input}})
