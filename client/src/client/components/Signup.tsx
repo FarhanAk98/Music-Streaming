@@ -3,9 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 import blueImage from '../assets/blue.jpg'; 
 
-
-const database = 'http://localhost:8000/graphql';
-
 const Signup: React.FC = () => {
   const navigate = useNavigate();
   const [fname, setFname] = useState("");
@@ -27,7 +24,7 @@ const Signup: React.FC = () => {
       createUser(input: $input)
     }`;
 
-    await fetch(database, {
+    await fetch("/graphql", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ query, variables: { input } })

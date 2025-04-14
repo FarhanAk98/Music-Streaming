@@ -1,10 +1,7 @@
-import { useState } from "react"
 import "./SongCard.css"
 import { FaPlay, FaPlus, FaMinus } from 'react-icons/fa';
 
-const database = 'http://localhost:8000/graphql'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Id } from "react-toastify"
 
 type song = {
     name: string
@@ -34,7 +31,7 @@ function SongCard(props:{song: song, mode: string | undefined, toast: (name:stri
             addToLibrary(input: $input)
         }`;
         
-        await fetch(database, {
+        await fetch("/graphql", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({query, variables:{input}})
@@ -50,7 +47,7 @@ function SongCard(props:{song: song, mode: string | undefined, toast: (name:stri
             const query = `query Query($input: String!) {
                 getAllLibraries(input: $input)
               }`;
-              const response = await fetch(database, {
+              const response = await fetch("/graphql", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query, variables: { input } }),
@@ -76,7 +73,7 @@ function SongCard(props:{song: song, mode: string | undefined, toast: (name:stri
                 removeFromLibrary(input: $input)
             }`;
             
-            await fetch(database, {
+            await fetch("/graphql", {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({query, variables:{input}})

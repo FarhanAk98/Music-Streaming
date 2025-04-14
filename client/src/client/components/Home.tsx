@@ -3,7 +3,6 @@ import './Home.css';
 
 import SongCard from './SongCard';
 import { toast, ToastContainer } from 'react-toastify';
-const database = 'http://localhost:8000/graphql'
 
 type song = {
   name: string

@@ -14,8 +14,6 @@ interface Song {
   audio: string;
 }
 
-const database = "http://localhost:8000/graphql";
-
 const Library = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ const Library = () => {
     const query = `query Query($input: String!) {
       getAllLibraries(input: $input)
     }`;
-    const response = await fetch(database, {
+    const response = await fetch("/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables: { input } }),
@@ -68,7 +66,7 @@ const Library = () => {
       }
     }`;
 
-    const response = await fetch(database, {
+    const response = await fetch("/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables: { input } }),
@@ -112,7 +110,7 @@ const Library = () => {
       addLibrary(input: $input)
     }`;
 
-    await fetch(database, {
+    await fetch("/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables: { input } }),
@@ -137,7 +135,7 @@ const Library = () => {
         addToLibrary(input: $input)
     }`;
     
-    await fetch(database, {
+    await fetch("/graphql", {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({query, variables:{input}})
