@@ -21,20 +21,20 @@ const resolvers = {
 
 const {ApolloServer} = require('apollo-server-express');
 
-const server = new ApolloServer({
-    typeDefs: fs.readFileSync(require.resolve('./qlschema.graphql'), 'utf-8'), 
-    resolvers: resolvers,
-    persistedQueries: {
-        cache: 'bounded',
-    }
-})
+async function startServer() {
+    const server = new ApolloServer({
+        typeDefs: fs.readFileSync(require.resolve('./qlschema.graphql'), 'utf-8'), 
+        resolvers: resolvers,
+        persistedQueries: {
+            cache: 'bounded',
+        }
+    })
+    db = databaseConnect();
 
-server.start().then(
-    (res)=>{
-        server.applyMiddleware({app,path:'/graphql'});
-        databaseConnect();
-        app.listen(process.env.SERVER_PORT, ()=>{
-            console.log('API server started on port 8000');
-        })
-    }
-);
+    await server.start();
+    server.applyMiddleware({ app, path: '/graphql' });
+}
+
+startServer()
+
+module.exports = app;
