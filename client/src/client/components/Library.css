@@ -335,9 +335,6 @@
     .library-container {
         background-size:cover; 
     }
-    .search-container {
-        max-width: 90%;
-    }
 
     .search-input {
         font-size: 0.9rem;
@@ -346,11 +343,6 @@
 }
 /* Responsive adjustments for tablets */
 @media (max-width: 1024px){
-    .search-container {
-        max-width: 80%;
-      
-    }
-
     .song-list {
         grid-template-columns: repeat(2, 1fr);
     }    

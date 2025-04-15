@@ -1,7 +1,5 @@
 import { SyntheticEvent, useEffect, useState } from "react";
-import { Button, Card, CardContent, Typography, TextField } from "@mui/material";
-import { PlayArrow, Shuffle, Delete, Search } from "@mui/icons-material";
-import ReactAudioPlayer from "react-audio-player";
+import { Typography } from "@mui/material";
 import SongCard from './SongCard';
 import "./Library.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -25,7 +23,6 @@ const Library = () => {
   const [libraryName, setLibraryName] = useState<string>("");
   const [allLibraryNames, setAllLibraryNames] = useState<string[]>([]);
   const [addScreen, setAddScreen] = useState<boolean>(false);
-  const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     getSongs();
@@ -77,21 +74,6 @@ const Library = () => {
     const result = await response.json();
     return result.data.getLibrary;
   }
-
-  // const handleShuffle = () => {
-  //   setFilteredSongs([...filteredSongs].sort(() => Math.random() - 0.5));
-  // };
-
-  // const handlePlayAll = () => {
-  //   const firstSong = document.querySelector("audio");
-  //   if (firstSong instanceof HTMLAudioElement) {
-  //     firstSong.play();
-  //   }
-  // };
-
-  // const handleDeleteAll = () => {
-  //   setLibrarySongs([]);
-  // };
 
   const songList = async()=>{
     if(!showAvailableSongs){
@@ -147,22 +129,7 @@ const Library = () => {
 
   return (
     <div className="library-container">
-      {/* Search Bar */}
-      <div className="search-container23">
-  <TextField
-    label="Search Songs"
-    variant="outlined"
-    fullWidth
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    InputProps={{
-      startAdornment: (
-        <span className="search-icon">&#128269;</span> // Magnifying glass icon
-      ),
-    }}
-  />
-</div>
-
+      
       {/* My Library Section */}
       <div className="my-library">
         <Typography variant="h4" className="my-library-title">
