@@ -1,11 +1,12 @@
-const url = process.env.DB_URL;
-const key = process.env.DB_KEY;
+const supabaseUrl = process.env.DB_URL;
+const supabaseKey = process.env.DB_KEY;
 const api = process.env.MUSIC_API
+const { createClient } = require('@supabase/supabase-js');
 const mysql = require('mysql2');
 let db;
 
 function databaseConnect(){
-    db = createClient(url, key);
+    db = createClient(supabaseUrl, supabaseKey);
 }
 
 async function userAuthentication(_, {input}){

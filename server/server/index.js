@@ -29,7 +29,7 @@ async function startServer() {
             cache: 'bounded',
         }
     })
-    db = databaseConnect();
+    databaseConnect();
 
     await server.start();
     server.applyMiddleware({ app, path: '/graphql' });
