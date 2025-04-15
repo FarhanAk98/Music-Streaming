@@ -145,6 +145,10 @@ nav a {
     padding: 15px 20px;
   }
 
+  .search-container{
+    gap: 10px;
+  }
+
   .song-list {
     grid-template-columns: repeat(2, 50%);
   }

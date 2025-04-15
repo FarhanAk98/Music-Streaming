@@ -1,129 +1,83 @@
-/* Container */
 .feedback-container {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    padding: 30px 20px;
-    color: #333;
-    background-image: url(../assets/feedback.jpg);
-  }
-  
-  /* Search Bar */
-  .search-bar02 {
-    text-align: center;
-    margin-bottom: 30px;
-   
-  }
-  
-  .search-bar02 input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 50%;
-    transition: border-color 0.3s ease;
-  }
-  
-  .search-bar02 input:focus {
-    border-color: #3f51b5;
-    outline: none;
-  }
-  
-  .search-bar02 button {
-    padding: 10px 15px;
-    margin-left: 8px;
-    border: none;
-    background-color: #0cad27;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-bar02 button:hover {
-    background-color: #0b9b2a;
-  }
-  
-  /* Title */
-  .page-title {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    margin-bottom: 20px;
-    color: #e7e4ec;
-  }
-  
-  /* Form */
-  .feedback-form {
-    background-color: transparent;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 30px;
-    
-  }
-  
-  .feedback-form h3 {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    text-align: center;
-    color: #dcdde6;
-    font-weight: bolder;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    
-  }
-  
-  .form-group label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 8px;
-    color: #040b44;
-    font-weight: bolder;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #d8d2d2;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    
-    
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #3f51b5;
-    outline: none;
-  }
-  
-  .radio-group label {
-    display: inline-block;
-    margin-right: 20px;
-    font-weight: normal;
-  }
-  .comm{
-    font-size: 1em;
-    color: #bb1818;
-  }
-  /* Submit Button */
-  .submit-btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 24px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    display: block;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #388e3c;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(rgba(48, 47, 47, 0.6), rgba(104, 92, 92, 0.6)),
+              url('../assets/feedback.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Feedback Form */
+.feedback-form {
+  background-color: rgb(192,192,192);opacity:0.6;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(104, 101, 101, 0.2);
+}
+
+.feedback-form h3 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #080808;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f1e8e8;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #faefef;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #5e9cff;
+  background-color: #f1e8e8;
+  outline: none;
+}
+
+/* Radio Buttons */
+.radio-group label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 500;
+  color: #050505;
+}
+
+/* Comment Styling */
+.comm {
+  font-size: 1em;
+  color: #c82333;
+  font-weight: 500;
+}

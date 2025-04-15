@@ -194,22 +194,6 @@ const Library = () => {
           )}
         </div>
       </div>
-
-      {/* Controls Section
-      <Typography variant="subtitle1" className="library-subtitle">
-        Controls for saved songs
-      </Typography>
-      <div className="controls">
-        <Button variant="contained" startIcon={<Shuffle />} onClick={handleShuffle}>
-          Shuffle All
-        </Button>
-        <Button variant="contained" color="primary" startIcon={<PlayArrow />} onClick={handlePlayAll}>
-          Play All
-        </Button>
-        <Button variant="contained" color="error" startIcon={<Delete />} onClick={handleDeleteAll}>
-          Delete All
-        </Button>
-      </div> */}
     </div>
   );
 };

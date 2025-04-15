@@ -24,11 +24,7 @@ const FeedbackPage: React.FC = () => {
     <div className="feedback-container">
       
 
-      {/* Search Bar */}
-      <div className="search-bar02">
-        <input type="text" placeholder="Search..." />
-        <button>🔍</button>
-      </div>
+      
 
       {/* Page Title */}
       <h2 className="page-title">Feedback Page</h2>
@@ -113,5 +109,4 @@ const FeedbackPage: React.FC = () => {
     </div>
   );
 };
-
 export default FeedbackPage;

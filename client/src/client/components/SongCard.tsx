@@ -79,7 +79,7 @@ function SongCard(props:{song: song, mode: string | undefined, toast: (name:stri
                 body: JSON.stringify({query, variables:{input}})
             })
             if(ind == libnames.length - 1){
-                window.location.reload();
+                navigate('/library/'+props.mode)
             }
         })
     }
