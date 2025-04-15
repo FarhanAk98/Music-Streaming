@@ -67,53 +67,53 @@ const App: React.FC = () => {
             <Route path="/feedbackPage" element={<FeedbackPage />} />
           </Routes>
         </div>
+        <footer className="footer">
+          <div className="footer-container">
+            <div className="footer-section">
+              <h4>Quick Links</h4>
+              <Link to="/about" >About Us</Link>
+              <Link to="/privacypolicy" >Privacy Policy</Link>
+              <Link to="/contactus" >Contact Us</Link>
+            </div>
+            <div className="footer-section">
+              <h4>Navigation</h4>
+              <Link to="/">Home</Link>
+              <Link to="/library/home">Library</Link>
+              <Link to="/login">Login</Link>
+            </div>
+            <div className="footer-section">
+              <h4>Follow Us</h4>
+              <a
+                href="https://www.facebook.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook size={24} />
+              </a>
+              <a
+                href="https://twitter.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram size={24} />
+              </a>
+            </div>
+          </div>
+          <div className="copyright">
+            <p className="copyright">&copy; {new Date().getFullYear()} Music App. All Rights Reserved.</p>
+          </div>
+        </footer>
       </Router>
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <a href="/about">About us</a>
-            <a href="/privacypolicy">Privacy Policy</a>
-            <a href="/contactus">Contact Us</a>
-          </div>
-          <div className="footer-section">
-            <h4>Navigation</h4>
-            <a href="/">Home</a>
-            <a href="/library/home">Library</a>
-            <a href="/login">Login</a>
-          </div>
-          <div className="footer-section">
-            <h4>Follow Us</h4>
-            <a
-              href="https://www.facebook.com"
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook size={24} />
-            </a>
-            <a
-              href="https://twitter.com"
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter size={24} />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram size={24} />
-            </a>
-          </div>
-        </div>
-        <div className="copyright">
-          <p className="copyright">&copy; {new Date().getFullYear()} Music App. All Rights Reserved.</p>
-        </div>
-      </footer>
     </>
   );
 };
