@@ -1,30 +1,23 @@
-const host = process.env.DB_HOST;
-const user = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
-const database = process.env.DB_DATABASE;
+const url = process.env.DB_URL;
+const key = process.env.DB_KEY;
 const api = process.env.MUSIC_API
 const mysql = require('mysql2');
 let db;
 
 function databaseConnect(){
-    db = mysql.createConnection({
-        host: host,
-        user: user,
-        password: password,
-        database: database
-    });
-    db.connect();
+    db = createClient(url, key);
 }
 
 async function userAuthentication(_, {input}){
     const email = mysql.escape(input.email).substring(1, input.email.length+1)
     const password = mysql.escape(input.password).substring(1, input.password.length+1)
-    const query = "Select * from user where email = ? and password = ?";
-    const [rows, fields] = await db.promise().query(query, [email, password])
+    let { data: user, error } = await supabase
+        .from('user')
+        .select("*")
+        .eq("email", email)
+        .eq("pssword", password)
     
-    if(rows.length == 0)
-        return null;
-    return rows[0].name;
+    console.log(user)
 }
 
 async function createUser(_, {input}){
