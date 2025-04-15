@@ -35,3 +35,5 @@ async function startServer() {
     server.applyMiddleware({ app, path: '/graphql' });
 }
 startServer()
+
+module.exports = app;

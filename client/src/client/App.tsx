@@ -49,9 +49,9 @@ const App: React.FC = () => {
                 <>
                   <Link to="/login">Login</Link>
                   <Link to="/signup">Signup</Link>
-                  <Link to="/feedbackPage">Feedback</Link>
                 </>
               )}
+              <Link to="/feedbackPage">Feedback</Link>
             </nav>
           </header>
 
