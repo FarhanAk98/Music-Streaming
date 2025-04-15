@@ -94,8 +94,8 @@ function SongCard(props:{song: song, mode: string | undefined, toast: (name:stri
         <div className="songCard">
             <div>
                 <img src={props.song.album_image} alt={props.song.album_name} />
-                <h4>{props.song.name}</h4>
                 <p>{props.song.artist_name}</p>
+                <h4>{props.song.name}</h4>
             </div>
             <div>
             <button onClick={Play} title="Play"><FaPlay /></button>
