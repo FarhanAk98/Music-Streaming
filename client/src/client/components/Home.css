@@ -1,7 +1,7 @@
 .Home{
   background-image: url(../assets/home.jpg);
-
 }
+
 nav {
   display: flex;
   gap: 20px;
@@ -18,10 +18,8 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  padding-top: 10px;
-  margin-left: 15px;
-  padding-right: 25%;
+  gap: 20px;
+  padding: 10px;
   width: 100%;
 }
 /* Search Input */
@@ -31,6 +29,7 @@ nav a {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 0;
 }
 .search-btn {
   display: flex;
@@ -43,8 +42,7 @@ nav a {
   background-color: #61e665;
   color: white;
   cursor: pointer;
-  margin-bottom: 25px;
-  
+  margin: 0;
 }
 
 .search-btn:hover {
@@ -61,8 +59,7 @@ nav a {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-left: 25px;
-  margin-bottom: 25px;
+  margin-left: 25%;
 }
 .song23{
   color:white;
@@ -133,10 +130,8 @@ nav a {
   transition: all 0.3s ease-in-out;
   outline: none;
   width: 99%;
-  gap: 5px;
   margin-top: 8px;
   margin-left: 6px;
-  margin-right: 6px;
   
 }
 #searchType option {
@@ -174,13 +169,11 @@ nav a {
  .search-bar {
     flex: none; 
     margin: 0;
-    width: 100%;
+    width: 80%;
   }
 
   .search-btn {
     height: 40px;
-    margin-top: 22px;
-    margin-left: 10px;
   }
 
   .search-btn:hover {
@@ -194,9 +187,8 @@ nav a {
   /* Genre Filter on the Right */
   .genre-filter {
     width: 220px;
-    margin-left: 50px;
     text-align: right;
-    margin-top: auto;
+    margin: 0;
   }
 
   .welcome-section h1 {

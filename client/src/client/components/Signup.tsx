@@ -1,8 +1,6 @@
 import { SyntheticEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
-import blueImage from '../assets/blue.jpg'; 
-
 
 const database = '/graphql';
 
