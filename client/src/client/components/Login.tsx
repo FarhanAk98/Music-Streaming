@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import blueImage from '../assets/blue.jpg'; 
 
+const database = '/graphql'
+
 type userType = {
   name: string
 }
@@ -29,7 +31,7 @@ function Login(props:{setUser: React.Dispatch<React.SetStateAction<userType>>}) 
       password: password
     }
 
-    const response = await fetch("/graphql", {
+    const response = await fetch(database, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({query, variables:{input}})

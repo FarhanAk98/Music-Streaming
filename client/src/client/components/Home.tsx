@@ -3,6 +3,7 @@ import './Home.css';
 
 import SongCard from './SongCard';
 import { toast, ToastContainer } from 'react-toastify';
+const database = '/graphql'
 
 type song = {
   name: string
@@ -56,13 +57,14 @@ function Home() {
     }
     `;
 
-    const response = await fetch('/graphql', {
+    const response = await fetch(database, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({query, variables:{input}})
     });
 
     const result = await response.json();
+    console.log(result)
     setDisplaySongs(result.data.searchTracks)
   }
 
