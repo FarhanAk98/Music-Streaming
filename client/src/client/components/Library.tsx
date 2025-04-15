@@ -142,7 +142,7 @@ const Library = () => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({query, variables:{input}})
     })
-    window.location.reload();
+    navigate('/library/'+params.libname)
   }
 
   return (

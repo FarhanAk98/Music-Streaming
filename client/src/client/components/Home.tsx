@@ -64,7 +64,6 @@ function Home() {
     });
 
     const result = await response.json();
-    console.log(result)
     setDisplaySongs(result.data.searchTracks)
   }
 
