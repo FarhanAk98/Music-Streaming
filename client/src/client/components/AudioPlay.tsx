@@ -8,6 +8,7 @@ import logo from '../assets/Logo.jpg';
 function AudioPlayer() {
   const handle = useFullScreenHandle();
   const [isFull, setIsFull] = useState(false);
+  const [playing, setPlaying] = useState(false)
   const params = useParams();
   const { state } = useLocation();
   const src = state?.src;
@@ -24,9 +25,15 @@ function AudioPlayer() {
         <div className="music-container">
           {/* Song Card */}
           <div className="music-card">
-            <img src={album} alt="album art" />
+            <img className={playing ? "":"nospin"} src={album} alt="album art" />
             <h4>{params.name}</h4>
-            <ReactAudioPlayer src={src} autoPlay controls />
+            <ReactAudioPlayer 
+              src={src} 
+              onPause={()=>setPlaying(false)}
+              onPlay={()=>setPlaying(true)}
+              autoPlay 
+              controls 
+            />
 
             {!isFull && (
               <button className="fullscreen-btn" onClick={handle.enter} title="Enter Full Screen">
